@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>JavaScript</title>
+		<script type="text/javascript">
+			function selected() //function name and  we can send arguments  and parameters
+			{
+				var checkitems=document.getElementsByName('acs');//assinging variable to the elements to grab informations
+				var selectedcheckbox=""; //declared the selectedcheckbox which is empty to call the result here with alertbox
+				for(var i=0; i<checkitems.length; i++)//item index "0"
+				//calculate item length ie: 0.1.2.3... and loop through with "i" ==>while less than item.length  and increment ++ "i" Value 
+				{
+					if(checkitems[i].type=='checkbox' && checkitems[i].checked==true)// call checkbox items with condition if tis was checked  and equals to true state
+						selectedcheckbox+=checkitems[i].value+"\n"; //ready to display  selected checkboxes
+						
+				}
+				alert(selectedcheckbox);//print selectedcheckbox via alertbox
+			//welcome.innerText+= selectedcheckbox+checkitems[i].value+"\n";
+			}	
+			
+				
+		</script>
+	</head>
+<body style="text-align: left;">
+	<h1>&nbsp;</h1>
+	<div id="select">Value of   CheckBoxes<br><form>
+    <input type="checkbox" name="acs" value="Javascript">
+	Javascript<br>
+	<input type="checkbox" name="acs" value="Angular JS">
+	Angular JS<br>
+	<input type="checkbox" name="acs" value="Observables">
+	Observables<br>
+	<input type="checkbox" name="acs" value="TypeScript">
+	TypeScript<br>
+	<p>
+		<input type="button" onclick='selected()' value="Submit"/>
+	</p>
+    </form>
+</div>
+    
+</body>
+
+</html>
