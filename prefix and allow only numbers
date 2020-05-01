@@ -1,0 +1,47 @@
+<html>
+<head>
+    
+    <title> javascript ways to add in HTML   </title>
+    <style>
+	.currencyinput {
+    border: 1px inset #ccc;
+	color:#666
+}
+.currencyinput input {
+    border: 0;
+}
+	</style>
+      </head>
+<body>
+    <div id="duplicateremoved2"></div><br>
+ <div class="main">
+  <h1>non removable INR prefix and also accept only numbers</h1>
+  
+  <span class="currencyinput">INR:<input type="text" onkeypress='return iskeynum(event)'></span>
+  
+  
+
+  <script>
+   function iskeynum(event)
+      {
+         var keynum = (event.which) ? event.which : event.keyCode
+		 //which property returns which keyboard key or mouse button was pressed in this event
+		 //event.keyCode property returns the Unicode character code of the key that triggered the onkeypress event
+		 
+		 
+		 //The keynum property returns the Unicode character code of the key that triggered the onkeypress event.
+		 //comparing pressed keycodes restrict the Alphabets
+		 /*check keyboard  48-57 Numbers
+			  8  - Backspace,
+			  35 - home key, 36 - End key
+			  37-40: Arrow keys, 46 - Delete key*/
+		 
+         if (keynum > 31 && (keynum < 48 || keynum > 57))
+            return false;
+         return true;
+	  }
+</script>
+
+ 
+
+</html>
