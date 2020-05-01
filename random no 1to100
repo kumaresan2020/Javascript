@@ -1,0 +1,39 @@
+<html>
+<head>
+    
+    <title> Random value   </title>
+ 
+      </head>
+<body>
+    <div id="randomno"></div><br>
+ 
+  
+
+  <script>
+  var result = document.getElementById('randomno');
+var num = Math.floor(Math.random() * 99 + 1);
+   //Math.floor( (Math.random() * 99) + 1); multiplying Math.random() by 99 will provide a random number from [0, 99).
+
+//The +1 after the multiplication will change the output to be [1, 100).
+
+// Math.floor converts the random number that is in the range from [1, 100) to an integer value.
+
+
+//random method actually outputs a random number between 0 and 1 ex:[0.25]
+// a fixed decimal point number rather than a whole integer value. 
+// floor() does is gives us that random value. 
+
+//So multiply it by a value 99 and then add 1 to it. [0.25*99] 
+// Adding +1 will allow us to get a possible output of 6.
+
+
+
+result.innerHTML+='Your Random no is:'+''+num;  
+
+</script>
+
+
+
+ 
+
+</html>
