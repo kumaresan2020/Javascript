@@ -1,0 +1,43 @@
+<html>
+<head>
+    
+    <title> javascript ways to add in HTML   </title>
+      </head>
+<body>
+    
+     <div id="callbackfunction"></div><br>
+<form >
+Enter a String/Number: <input type="text" id="str" name="string" /><br />
+<input type="submit" value="Check" onClick="checkPalindrome();"/>
+</form>
+
+
+<script>
+function checkPalindrome() {
+var revStr = "";
+//declaring string objects
+var str = document.getElementById("str").value;
+
+//get length of the input string
+var i = str.length;
+
+////code to reverse string 
+for(var j=i; j>=0; j--)
+//greater than or equal to 0
+ {
+revStr = revStr+str.charAt(j);
+//charAt() is a method that returns the character from the specified index.
+
+//Characters in a string are indexed from left to right. The index of the first character is 0, <br>
+//and the index of the last character in a string, called stringName, is stringName.length – 1.
+
+}
+if(str == revStr) {
+alert(str+ ' ' +'is Palindrome');
+} else {
+alert(str+ ' ' +'is not a Palindrome');
+}
+}
+</script>
+
+</html> 
